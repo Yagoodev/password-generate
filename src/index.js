@@ -57,8 +57,8 @@ function setSelectedOptions() {
 function shufflePassword(pass) {
   // Algoritmo de fisher-yates
   for (let currentIndex = pass.length - 1; currentIndex > 0; currentIndex--) {
-    const randomIndex = Math.floor(Math.random() * (currentIndex + 1));
-    const temp = pass[currentIndex];
+    let randomIndex = Math.floor(Math.random() * (currentIndex + 1));
+    let temp = pass[currentIndex];
 
     pass[currentIndex] = pass[randomIndex];
     pass[randomIndex] = temp;
